@@ -1,10 +1,11 @@
 (function($) {
   function appendStat(name, val) {
     return $('<span><b>' + val + '</b> ' + name + '</span>');
-  }
+  };
 
   function augmentRepo(repo) {
     var repo = this;
+
     var elem = $('.repo_list li a[href=\"' + repo.url + '\"]');
 
     var stats = $('<div></div>').addClass('some-repo-stats');
@@ -28,7 +29,7 @@
 
     elem.after(stats);
     stats.slideDown();
-  }
+  };
 
   function fetchRepos() {
     var apiURL = 'http://github.com/api/v2/json/';
@@ -41,10 +42,10 @@
       if (data.repositories) {
         $('.some-repo-stats').remove();
         $.each(data.repositories, augmentRepo);
-        $.facebox.close()
+        $.facebox.close();
       }
-    })
-  }
+    });
+  };
 
   fetchRepos();
 })(jQuery)
