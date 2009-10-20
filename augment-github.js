@@ -67,5 +67,9 @@
     });
   };
 
-  fetchRepos();
+  if ($('#repo_listing').size()) {
+    fetchRepos();
+  } else {
+    alert("Dude, you're not on your dashboard.");
+  }
 })(jQuery)
