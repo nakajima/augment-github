@@ -5,7 +5,7 @@
 
   function augmentRepo(repo) {
     var repo = this;
-    var elem = $('.repo_list li a[href="' + repo.url + '"]');
+    var elem = $('.repo_list li a[href=\"' + repo.url + '\"]');
 
     var stats = $('<div></div>').addClass('some-repo-stats');
     var watchers = appendStat('watchers', repo.watchers);
@@ -31,7 +31,7 @@
   }
 
   function fetchRepos() {
-    var apiURL = "http://github.com/api/v2/json/";
+    var apiURL = 'http://github.com/api/v2/json/';
     var reposURL = apiURL + 'repos/show/' + $('.userbox .name').text();
     $.facebox($('<div>Loading repo data...</div>').css({
       textAlign: 'center'
