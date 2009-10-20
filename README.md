@@ -1,6 +1,6 @@
 # Augment GitHub
 
-Adds follower and fork counts to your repos on your dashboard page.
+Adds follower, fork, and issue counts to your repos on your dashboard page.
 
 ## Install it
 
